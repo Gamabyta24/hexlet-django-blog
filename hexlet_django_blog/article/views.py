@@ -4,4 +4,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('article')
+    context={'app_name':'hexlet_django_blog'}
+    return render(request, 'article/index.html',context=context)
